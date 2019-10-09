@@ -68,3 +68,22 @@ echo
 echo “#####Creating sshkeys before creating cluster#####”
 ssh-keygen
 echo
+
+echo
+echo "####Creating kubernetes cluster definitions on S3 bucket####"
+kops create cluster \
+    --state "s3://dev.k8s.appstacleoulu.fi" \
+     --zones "eu-west-3c" \
+     --master-count 1 \
+     --master-size=t2.medium\
+     --node-count 2 \
+     --node-size=t2.medium \
+     --name dev.k8s.appstacleoulu.fi \
+     --dns private
+     --yes
+echo
+
+echo 
+echo "####Creating kubernetes cluser####"
+kops update cluster dev.k8s.appstacleoulu.fi --yes
+echo Done!
