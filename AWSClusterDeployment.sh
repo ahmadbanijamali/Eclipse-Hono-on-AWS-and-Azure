@@ -88,10 +88,10 @@ echo “#####Creating kubernetes cluser#####”
 kops update cluster dev.k8s.appstacleoulu.fi –yes
 echo
 
-echo
-echo “#####Validating your cluster”
-kops validate cluster
-echo
+#echo
+#echo “#####Validating your cluster”
+#kops validate cluster
+#echo
 
 #To list nodes
 #kubectl get nodes
