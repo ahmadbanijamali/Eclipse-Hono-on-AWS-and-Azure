@@ -10,7 +10,7 @@ First, root the instnace:
 sudo su -
 ```
 
-Second...
+And then..
 ```
 git clone https://github.com/ahmadbanijamali/Hono-deployment-on-AWS.git && \
 cd Hono-deployment-on-AWS/ && \
@@ -19,28 +19,6 @@ chmod +x AWSClusterDeployment.sh && \
 ```
 
 Enter your EC2 instance zone when it required.
-
-Third...
-
-```
-kops create cluster \
-    --state "s3://dev.k8s.appstacleoulu.fi" \
-     --zones "eu-west-3c" \
-     --master-count 1 \
-     --master-size=t2.medium\
-     --node-count 2 \
-     --node-size=t2.medium \
-     --name dev.k8s.appstacleoulu.fi \
-     --dns private
-     --yes
-```
-
-Finally ...
-```
-kops update cluster dev.k8s.appstacleoulu.fi –yes
-```
-
-
 It takes 5-10 min to create the AWS k8s cluster.
 
 To validating your cluster:
