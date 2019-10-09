@@ -4,12 +4,11 @@
 set -e
 
 echo
-echo ì#####Creating Ubuntu EC2 instance#####î
-sudo su - 
-apt-get update
+echo ‚Äú#####Creating Ubuntu EC2 instance#####‚Äù
+sudo apt-get update
 
 echo
-echo ì#####Installing AWSCLI#####î
+echo ‚Äú#####Installing AWSCLI#####‚Äù
 curl https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o awscli-bundle.zip
 apt install unzip python
 unzip awscli-bundle.zip
@@ -17,20 +16,20 @@ unzip awscli-bundle.zip
 echo
 
 echo
-echo ì#####Installing kubectl#####î
+echo ‚Äú#####Installing kubectl#####‚Äù
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mv ./kubectl /usr/local/bin/kubectl
 echo
 
 echo
-echo ì#####Installing Docker#####î
+echo ‚Äú#####Installing Docker#####‚Äù
 apt-get install docker.io -y
 echo
 
 
 #echo
-#echo ì#####Installing Minikube#####î
+#echo ‚Äú#####Installing Minikube#####‚Äù
 # curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 
 # chmod +x minikube 
 # mv minikube /usr/local/bin/
@@ -39,39 +38,39 @@ echo
 #echo
 
 echo
-echo ì#####We need to have an IAM user/role with Route53, EC2, IAM and S3 full access#####î
-echo ì#####the role should be attached to the ubuntu instance#####î
+echo ‚Äú#####We need to have an IAM user/role with Route53, EC2, IAM and S3 full access#####‚Äù
+echo ‚Äú#####the role should be attached to the ubuntu instance#####‚Äù
 aws configure
 echo
 
 echo
-echo ì#####Installing kops on ubuntu instance#####î
+echo ‚Äú#####Installing kops on ubuntu instance#####‚Äù
 curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
 chmod +x kops-linux-amd64
 mv kops-linux-amd64 /usr/local/bin/kops
 echo
 
 echo
-echo ì#####We need to have a Route53 private hosted zone#####î 
+echo ‚Äú#####We need to have a Route53 private hosted zone#####‚Äù 
 echo 
 
 echo
-echo ì#####Creating an S3 bucketî
+echo ‚Äú#####Creating an S3 bucket‚Äù
 aws s3 mb s3://dev.k8s.appstacleoulu.fi
 echo
 
 echo
-echo ì#####Expose environment variable#####î
+echo ‚Äú#####Expose environment variable#####‚Äù
 export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
 echo
 
 echo
-echo ì#####Creating sshkeys before creating cluster#####î
+echo ‚Äú#####Creating sshkeys before creating cluster#####‚Äù
 ssh-keygen
 echo
 
 echo
-echo ì#####Creating kubernetes cluster definitions on S3 bucket#####î
+echo ‚Äú#####Creating kubernetes cluster definitions on S3 bucket#####‚Äù
 kops create cluster \
     --state "s3://dev.k8s.appstacleoulu.fi" \
      --zones "eu-west-3c" \
@@ -85,12 +84,12 @@ kops create cluster \
 echo
 
 echo
-echo ì#####Creating kubernetes cluser#####î
-kops update cluster dev.k8s.appstacleoulu.fi ñyes
+echo ‚Äú#####Creating kubernetes cluser#####‚Äù
+kops update cluster dev.k8s.appstacleoulu.fi ‚Äìyes
 echo
 
 echo
-echo ì#####Validating your clusterî
+echo ‚Äú#####Validating your cluster‚Äù
 kops validate cluster
 echo
 
