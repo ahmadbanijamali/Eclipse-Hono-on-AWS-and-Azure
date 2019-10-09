@@ -80,9 +80,3 @@ kops create cluster \
      --name dev.k8s.appstacleoulu.fi \
      --dns private
      --yes
-echo
-
-echo 
-echo "####Creating kubernetes cluser####"
-kops update cluster dev.k8s.appstacleoulu.fi --yes
-echo Done!
