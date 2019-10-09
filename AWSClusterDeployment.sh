@@ -58,11 +58,10 @@ echo "#####Creating an S3 bucket"
 aws s3 mb s3://dev.k8s.appstacleoulu.fi
 echo Done!
 
-echo
-echo "#####Expose environment variable#####"
-KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
-export KOPS_STATE_STORE
-echo Done!
+#echo
+#echo "#####Expose environment variable#####"
+#export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
+#echo Done!
 
 echo
 echo “#####Creating sshkeys before creating cluster#####”
