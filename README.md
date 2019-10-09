@@ -1,4 +1,4 @@
-Here is an example of AWS k8s cluster deployment
+Here is an example of Eclipse Hono deployment on AWS k8s cluster
 
 Prerequisities before running the AWS k8s cluster deployment: 
 * a fresh EC2 Ubuntu instance on AWS
