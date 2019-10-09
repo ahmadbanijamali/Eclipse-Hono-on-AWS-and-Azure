@@ -51,3 +51,9 @@ To access the K8s master node:
 cd .ssh
 ssh -i id_rsa admin@(Public DNS)
 ```
+
+To deploy the Eclipse Hono on the AWS clusters:
+```
+chmod +x HonoDeployment_AWS_k8s.sh && \
+./HonoDeployment_AWS_k8s.sh
+```
