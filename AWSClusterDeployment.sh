@@ -4,7 +4,7 @@
 set -e
 
 echo
-echo “#####Creating Ubuntu EC2 instance#####"
+echo "#####Creating Ubuntu EC2 instance#####"
 apt-get update
 
 echo
