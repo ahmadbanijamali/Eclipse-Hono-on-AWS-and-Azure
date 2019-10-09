@@ -18,6 +18,8 @@ chmod +x AWSClusterDeployment.sh && \
 ./AWSClusterDeployment.sh
 ```
 
+Enter your EC2 instance zone when it required.
+
 Third...
 
 ```
