@@ -56,14 +56,12 @@ echo
 echo
 echo "#####Creating an S3 bucket"
 aws s3 mb s3://dev.k8s.appstacleoulu.fi
-sleep 10
 echo Done!
 
 echo
 echo "#####Expose environment variable#####"
-KOPS_STATE_STORE="s3://dev.k8s.appstacleoulu.fi"
+KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
 export KOPS_STATE_STORE
-sleep 5
 echo Done!
 
 echo
