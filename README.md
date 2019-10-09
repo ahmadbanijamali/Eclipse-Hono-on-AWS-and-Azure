@@ -5,7 +5,7 @@ Prerequisities before running the AWS k8s cluster deployment:
 
 
 ```
-sudo su - && \ apt-get update && \
+sudo su - && \
 git clone https://github.com/ahmadbanijamali/Hono-deployment-on-AWS.git && \
 cd Hono-deployment-on-AWS/ && \
 chmod +x AWSClusterDeployment.sh && \
