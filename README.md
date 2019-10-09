@@ -57,3 +57,9 @@ To deploy the Eclipse Hono on the AWS clusters:
 chmod +x HonoDeployment_AWS_k8s.sh && \
 ./HonoDeployment_AWS_k8s.sh
 ```
+
+To get Hono services and pods
+```
+kubectl get service -n hono
+kubectl get pods -n hono
+```
