@@ -25,8 +25,7 @@ Enter your EC2 instance zone when it required.
 
 Finally, create kubernetes cluser:
 ```
-kops update cluster dev.k8s.appstacleoulu.fi --yes && \
-cd 
+kops update cluster dev.k8s.appstacleoulu.fi --yes
 ```
 It takes 5-10 min to create the AWS k8s cluster.
 
