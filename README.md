@@ -63,3 +63,8 @@ To get Hono services and pods
 kubectl get service -n hono
 kubectl get pods -n hono
 ```
+To describe the pod and get logs
+```
+kubectl describe pod ... -n hono
+kubectl -n hono logs ...
+```
