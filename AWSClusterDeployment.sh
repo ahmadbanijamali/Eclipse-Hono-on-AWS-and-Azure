@@ -10,7 +10,7 @@ sudo apt-get update
 echo
 echo “#####Installing AWSCLI#####”
 curl https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o awscli-bundle.zip
-apt install unzip python
+sudo apt install unzip python
 unzip awscli-bundle.zip
 ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 echo
