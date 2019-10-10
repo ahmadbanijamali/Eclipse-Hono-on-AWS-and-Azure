@@ -58,10 +58,9 @@ chmod +x HonoDeployment_AWS_k8s.sh && \
 ./HonoDeployment_AWS_k8s.sh
 ```
 
-To get Hono services and pods
+To get Hono services, pods, and endpoints
 ```
-kubectl get service -n hono
-kubectl get pods -n hono
+kubectl get pods,svc,ep -n hono
 ```
 To describe the pod and get logs
 ```
