@@ -1,10 +1,19 @@
-#Setup Kubernetes (K8s) Cluster on AWS
+echo
+echo "###########################################################"
+echo "###########################################################"
+echo "###############   Setup Kubernetes Cluster on AWS  ###############"
+echo "###########################################################"
+echo "###########################################################"
+echo
+echo "########## Initialization ##########"
+
+
+#
 
 # Make the script fail if a command fails
 set -e
 
 echo
-echo "#####Creating Ubuntu EC2 instance#####"
 apt-get update
 
 echo
