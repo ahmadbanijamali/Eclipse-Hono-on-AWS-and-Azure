@@ -23,14 +23,14 @@ helm init
 echo Done!
 
 echo
-echo “####Clone the Hono Helm chart####”
+echo “####Clone the Eclipse Hono Helm chart####”
 wget http://download.eclipse.org/hono/eclipse-hono-1.0-M7-chart.tar.gz
 tar -zxvf eclipse-hono-1.0-M7-chart.tar.gz -C /root/
 cd
 echo
 
 echo 
-echo “####Deploying Hono####”
+echo “####Deploying Eclipse Hono 1.0####”
 cd eclipse-hono-1.0-M7/deploy/ 
 helm dep update helm/eclipse-hono 
 helm template --name hono --namespace hono --output-dir . helm/eclipse-hono 
