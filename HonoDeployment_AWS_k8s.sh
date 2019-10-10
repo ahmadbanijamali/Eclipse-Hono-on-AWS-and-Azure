@@ -1,6 +1,16 @@
-echo “####Eclipse Hono on AWS k8s####”
 
-cd ~/ 
+echo
+echo "#########################################"
+echo "#########################################"
+echo "###########     Eclipse Hono     ########"
+echo "###### Eclipse Hono 1.0 on AWS k8s ######"
+echo "#########################################"
+echo "#########################################"
+echo
+echo "############ Initialization  ############"
+
+#
+
 
 echo ”####installing Helm####”
 curl -LO https://git.io/get_helm.sh
