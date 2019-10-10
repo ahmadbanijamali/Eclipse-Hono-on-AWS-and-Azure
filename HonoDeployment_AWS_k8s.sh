@@ -38,4 +38,4 @@ kubectl create namespace hono
 kubectl config set-context $(kubectl config current-context) --namespace=hono  
 find . -path "./eclipse-hono/*" -name crd*.yaml -exec kubectl apply -f {} \;  
 kubectl apply -f ./eclipse-hono -R
-echo “####success!!###””
+echo Done!
