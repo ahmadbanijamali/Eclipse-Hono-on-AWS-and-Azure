@@ -1,5 +1,8 @@
-echo ì####Eclipse Hono on AWS k8s####î
-echo î####installing Helm####î
+echo ‚Äú####Eclipse Hono on AWS k8s####‚Äù
+
+cd ~/ 
+
+echo ‚Äù####installing Helm####‚Äù
 curl -LO https://git.io/get_helm.sh
 chmod 700 get_helm.sh
 ./get_helm.sh
@@ -10,14 +13,14 @@ helm init
 echo Done!
 
 echo
-echo ì####Clone the Hono Helm chart####î
+echo ‚Äú####Clone the Hono Helm chart####‚Äù
 wget http://download.eclipse.org/hono/eclipse-hono-1.0-M7-chart.tar.gz
 tar -zxvf eclipse-hono-1.0-M7-chart.tar.gz -C /root/
 cd
 echo
 
 echo 
-echo ì####Deploying Hono####î
+echo ‚Äú####Deploying Hono####‚Äù
 cd eclipse-hono-1.0-M7/deploy/ 
 helm dep update helm/eclipse-hono 
 helm template --name hono --namespace hono --output-dir . helm/eclipse-hono 
@@ -25,4 +28,4 @@ kubectl create namespace hono
 kubectl config set-context $(kubectl config current-context) --namespace=hono  
 find . -path "./eclipse-hono/*" -name crd*.yaml -exec kubectl apply -f {} \;  
 kubectl apply -f ./eclipse-hono -R
-echo ì####success!!###îî
+echo ‚Äú####success!!###‚Äù‚Äù
