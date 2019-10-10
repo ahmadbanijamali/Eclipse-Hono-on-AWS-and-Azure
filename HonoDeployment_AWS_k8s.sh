@@ -7,7 +7,7 @@ echo "###### Eclipse Hono 1.0 on AWS k8s ######"
 echo "#########################################"
 echo "#########################################"
 echo
-echo "############ Initialization  ############"
+echo "####### Initialization #######"
 
 #
 
