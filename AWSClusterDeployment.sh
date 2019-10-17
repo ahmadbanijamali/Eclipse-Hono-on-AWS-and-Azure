@@ -83,9 +83,9 @@ kops create cluster \
     --state "s3://dev.k8s.appstacleoulu.fi" \
      --zones "eu-west-3c" \
      --master-count 1 \
-     --master-size=t2.medium\
+     --master-size=t2.xlarge\
      --node-count 2 \
-     --node-size=t2.medium \
+     --node-size=t2.xlarge \
      --name dev.k8s.appstacleoulu.fi \
      --dns private
      --yes
