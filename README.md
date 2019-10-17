@@ -40,12 +40,6 @@ And to list the nodes:
 kubectl get nodes
 ```
 
-To delete the k8s cluster:
-```
-export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
-kops delete cluster dev.k8s.appstacleoulu.fi --yes
-```
-
 To access the K8s master node:
 ```
 cd .ssh
@@ -66,4 +60,10 @@ To describe the pod and get logs
 ```
 kubectl describe pod ... -n hono
 kubectl -n hono logs ...
+```
+
+To delete the k8s cluster:
+```
+export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
+kops delete cluster dev.k8s.appstacleoulu.fi --yes
 ```
