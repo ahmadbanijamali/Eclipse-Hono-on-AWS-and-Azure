@@ -8,7 +8,6 @@ echo
 echo "########## Initialization ##########"
 
 
-#
 
 # Make the script fail if a command fails
 set -e
