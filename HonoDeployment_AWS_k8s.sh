@@ -24,8 +24,9 @@ echo Done!
 
 echo
 echo “####Clone the Eclipse Hono Helm chart####”
-wget http://download.eclipse.org/hono/eclipse-hono-1.0-M7-chart.tar.gz
-tar -zxvf eclipse-hono-1.0-M7-chart.tar.gz -C /root/
+git clone https://github.com/ahmadbanijamali/test.git
+cd test
+tar -zxvf eclipse-hono-1.0.0-chart.tar.gz -C /root/
 cd
 echo
 
