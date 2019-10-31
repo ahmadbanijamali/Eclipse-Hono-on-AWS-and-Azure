@@ -32,11 +32,12 @@ echo
 
 echo 
 echo “####Deploying Eclipse Hono 1.0####”
-cd eclipse-hono-1.0-M7/deploy/ 
-helm dep update helm/eclipse-hono 
-helm template --name hono --namespace hono --output-dir . helm/eclipse-hono 
-kubectl create namespace hono  
-kubectl config set-context $(kubectl config current-context) --namespace=hono  
-find . -path "./eclipse-hono/*" -name crd*.yaml -exec kubectl apply -f {} \;  
-kubectl apply -f ./eclipse-hono -R
+cd eclipse-hono 
+mkdir resources
+helm dep update eclipse-hono/
+helm template --name hono --namespace hono --output-dir resources eclipse-hono/
+helm template --name hono --namespace hono --set prometheus.createInstance=false --set grafana.enabled=false --output-dir resources eclipse-hono/
+kubectl create namespace hono
+kubectl config set-context $(kubectl config current-context) --namespace=hono
+kubectl apply -f ./resources -R
 echo Done!
