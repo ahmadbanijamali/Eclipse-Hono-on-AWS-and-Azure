@@ -67,6 +67,13 @@ chmod +x Azure_k8s.sh
 ./Azure_k8s.sh
 ```
 
+If encountered error, run folling scripts again:
+```
+az aks create --resource-group oulu --name azure --node-count 1 --generate-ssh-keys
+az aks install-cli
+az aks get-credentials --resource-group oulu --name azure
+```
+
 It takes 5-10 minutes before it creates the cluster node. To list nodes and get cluster info
 ```
 kubectl get nodes
@@ -77,12 +84,6 @@ kubectl cluster-info
 ```
 chmod +x Hono_deployment.sh
 ./Hono_deployment.sh
-```
-If encountered error, run folling scripts again:
-```
-az aks create --resource-group oulu --name azure --node-count 1 --generate-ssh-keys
-az aks install-cli
-az aks get-credentials --resource-group oulu --name azure
 ```
 
 To get Hono services, pods, and endpoints
