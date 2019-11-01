@@ -1,3 +1,4 @@
+
 ## Deploying AWS k8s cluster
 
 #### Prerequisities before running the AWS k8s cluster deployment: 
@@ -13,12 +14,10 @@ sudo su -
 export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
 ```
 
-And then..
+And then in "Eclipse-Hono-on-AWS-and-Azure" directory..
 ```
-git clone https://github.com/ahmadbanijamali/Hono-deployment-on-AWS.git && \
-cd Hono-deployment-on-AWS/ && \
-chmod +x AWSClusterDeployment.sh && \
-./AWSClusterDeployment.sh
+chmod +x AWS_k8s.sh && \
+./AWS_k8s.sh
 ```
 
 Enter your EC2 instance zone when it required.
@@ -70,8 +69,8 @@ chmod +x Azure_k8s.sh && \
 
 ## Deploying the Eclipse Hono on the AWS/Azure k8s clusters:
 ```
-chmod +x HonoDeployment_AWS_k8s.sh && \
-./HonoDeployment_AWS_k8s.sh
+chmod +x Hono_deployment.sh && \
+./Hono_deployment.sh
 ```
 
 To get Hono services, pods, and endpoints
