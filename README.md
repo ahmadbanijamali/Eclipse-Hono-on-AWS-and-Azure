@@ -1,4 +1,4 @@
-Here is an example of Eclipse Hono deployment on AWS k8s cluster
+## Deploying AWS k8s cluster
 
 Prerequisities before running the AWS k8s cluster deployment: 
 * a fresh EC2 Ubuntu instance on AWS
@@ -46,7 +46,19 @@ cd .ssh
 ssh -i id_rsa admin@(Public DNS)
 ```
 
-To deploy the Eclipse Hono on the AWS clusters:
+To delete the k8s cluster:
+```
+export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
+kops delete cluster dev.k8s.appstacleoulu.fi --yes
+```
+## Deploying Azure k8s cluster
+
+```
+chmod +x Azure_k8s.sh && \
+./Azure_k8s.sh
+```
+
+## Deploying the Eclipse Hono on the AWS/Azure k8s clusters:
 ```
 chmod +x HonoDeployment_AWS_k8s.sh && \
 ./HonoDeployment_AWS_k8s.sh
@@ -60,10 +72,4 @@ To describe the pod and get logs
 ```
 kubectl describe pod ... -n hono
 kubectl -n hono logs ...
-```
-
-To delete the k8s cluster:
-```
-export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
-kops delete cluster dev.k8s.appstacleoulu.fi --yes
 ```
