@@ -67,7 +67,7 @@ chmod +x Azure_k8s.sh
 ./Azure_k8s.sh
 ```
 
-To list nodes and get cluster info
+It takes 5-10 minutes before it creates the cluster node. To list nodes and get cluster info
 ```
 kubectl get nodes
 kubectl cluster-info
