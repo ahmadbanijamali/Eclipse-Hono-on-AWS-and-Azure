@@ -4,7 +4,7 @@
 #### Prerequisities before running the AWS k8s cluster deployment: 
 * a fresh [EC2 Ubuntu instance on AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
 * an IAM user/role with Route53, EC2, IAM and S3 full access and attached to the EC2 instance
-* a Route53 private hosted zone, example used is appstacleoulu.fi on eu-west-3 region
+* a Route53 private hosted zone, example used below uses domain "appstacleoulu.fi" on eu-west-3 region
 
 #### SSH to your cluster and follow this instruction: 
 
