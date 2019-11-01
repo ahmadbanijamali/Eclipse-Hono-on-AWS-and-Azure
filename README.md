@@ -14,7 +14,7 @@ sudo su -
 export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
 ```
 
-And then in "Eclipse-Hono-on-AWS-and-Azure" directory..
+#### in directory: Eclipse-Hono-on-AWS-and-Azure
 ```
 chmod +x AWS_k8s.sh && \
 ./AWS_k8s.sh
@@ -34,7 +34,7 @@ To validating your cluster:
 kops validate cluster
 ```
 
-And to list the nodes:
+And to list nodes:
 ```
 kubectl get nodes
 ```
@@ -56,7 +56,7 @@ kops delete cluster dev.k8s.appstacleoulu.fi --yes
 * an [Azure subscription](https://azure.microsoft.com/en-us/get-started/)
 * [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) installed to setup the infrastructure.
 
-login to your Azure CLI and root 
+#### login to your Azure CLI and root..
 ```
 sudo su -
 ```
@@ -65,6 +65,12 @@ Then..
 ```
 chmod +x Azure_k8s.sh && \
 ./Azure_k8s.sh
+```
+
+To list nodes and get cluster info
+```
+kubectl get nodes
+kubectl cluster-info
 ```
 
 ## Deploying the Eclipse Hono on the AWS/Azure k8s clusters:
