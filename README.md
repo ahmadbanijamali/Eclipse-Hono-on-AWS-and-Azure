@@ -16,7 +16,7 @@ export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
 
 #### in directory: Eclipse-Hono-on-AWS-and-Azure
 ```
-chmod +x AWS_k8s.sh && \
+chmod +x AWS_k8s.sh
 ./AWS_k8s.sh
 ```
 
