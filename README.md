@@ -57,6 +57,12 @@ kops delete cluster dev.k8s.appstacleoulu.fi --yes
 * an [Azure subscription](https://azure.microsoft.com/en-us/get-started/)
 * [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) installed to setup the infrastructure.
 
+login to your Azure CLI and root 
+```
+sudo su -
+```
+
+Then..
 ```
 chmod +x Azure_k8s.sh && \
 ./Azure_k8s.sh
