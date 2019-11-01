@@ -32,7 +32,10 @@ echo
 
 echo 
 echo “####Deploying Eclipse Hono 1.0.0####”
-cd $SCRIPTPATH/eclipse-hono-1.0.0
+cd ..
+alias home="cd .."
+. home
+cd eclipse-hono-1.0.0
 mkdir resources
 helm dep update eclipse-hono/
 helm template --name hono --namespace hono --output-dir resources eclipse-hono/
