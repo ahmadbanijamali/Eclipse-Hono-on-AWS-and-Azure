@@ -63,7 +63,7 @@ sudo su -
 #### in directory: Eclipse-Hono-on-AWS-and-Azure
 Then..
 ```
-chmod +x Azure_k8s.sh && \
+chmod +x Azure_k8s.sh
 ./Azure_k8s.sh
 ```
 
