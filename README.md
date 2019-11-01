@@ -7,7 +7,7 @@
 
 ### SSH to your cluster and follow this instruction: 
 
-** First, root the instnace: **
+First, root the instnace:
 ```
 sudo su -
 export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
