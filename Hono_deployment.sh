@@ -32,7 +32,8 @@ echo
 
 echo 
 echo “####Deploying Eclipse Hono 1.0.0####”
-cd /root/eclipse-hono-1.0.0 
+alias Hono_Dir="cd /root/eclipse-hono-1.0.0"
+Hono_Dir
 mkdir resources
 helm dep update eclipse-hono/
 helm template --name hono --namespace hono --output-dir resources eclipse-hono/
