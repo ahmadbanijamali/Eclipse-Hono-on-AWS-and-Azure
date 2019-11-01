@@ -5,7 +5,7 @@
 * an IAM user/role with Route53, EC2, IAM and S3 full access and attached to the EC2 instance
 * a Route53 private hosted zone, example used is appstacleoulu.fi on eu-west-3 region
 
-### SSH to your cluster and follow this instruction: 
+#### SSH to your cluster and follow this instruction: 
 
 First, root the instnace:
 ```
@@ -13,7 +13,7 @@ sudo su -
 export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
 ```
 
-** And then.. **
+And then..
 ```
 git clone https://github.com/ahmadbanijamali/Hono-deployment-on-AWS.git && \
 cd Hono-deployment-on-AWS/ && \
