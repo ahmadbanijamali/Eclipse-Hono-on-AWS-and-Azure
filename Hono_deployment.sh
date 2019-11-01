@@ -31,7 +31,7 @@ echo
 
 echo 
 echo “####Deploying Eclipse Hono 1.0.0####”
-cd ..
+./cd-backward
 mkdir resources
 helm dep update eclipse-hono/
 helm template --name hono --namespace hono --output-dir resources eclipse-hono/
