@@ -60,7 +60,7 @@ kops delete cluster dev.k8s.appstacleoulu.fi --yes
 ```
 sudo su -
 ```
-
+#### in directory: Eclipse-Hono-on-AWS-and-Azure
 Then..
 ```
 chmod +x Azure_k8s.sh && \
