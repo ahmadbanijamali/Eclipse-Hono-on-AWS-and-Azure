@@ -78,6 +78,12 @@ kubectl cluster-info
 chmod +x Hono_deployment.sh
 ./Hono_deployment.sh
 ```
+If encountered error, run folling scripts again:
+```
+az aks create --resource-group oulu --name azure --node-count 1 --generate-ssh-keys
+az aks install-cli
+az aks get-credentials --resource-group oulu --name azure
+```
 
 To get Hono services, pods, and endpoints
 ```
