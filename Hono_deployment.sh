@@ -26,14 +26,12 @@ echo
 echo “####Clone the Eclipse Hono Helm chart####”
 git clone https://github.com/ahmadbanijamali/test.git
 cd test
-tar -zxvf eclipse-hono-1.0.0-chart.tar.gz -C /root/
-cd ~/ 
+tar -zxvf eclipse-hono-1.0.0-chart.tar.gz -C /root/ 
 echo
 
 echo 
 echo “####Deploying Eclipse Hono 1.0.0####”
-alias Hono_Dir="cd /root/eclipse-hono-1.0.0"
-Hono_Dir
+cd ..
 mkdir resources
 helm dep update eclipse-hono/
 helm template --name hono --namespace hono --output-dir resources eclipse-hono/
