@@ -67,7 +67,7 @@ chmod +x Azure_k8s.sh
 ./Azure_k8s.sh
 ```
 
-If encountered error, run folling scripts again:
+If encountered error, run following scripts again:
 ```
 az aks create --resource-group oulu --name azure --node-count 1 --generate-ssh-keys
 az aks install-cli
