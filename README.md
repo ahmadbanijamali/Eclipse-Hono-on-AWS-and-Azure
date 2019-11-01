@@ -1,6 +1,6 @@
 ## Deploying AWS k8s cluster
 
-### Prerequisities before running the AWS k8s cluster deployment: 
+#### Prerequisities before running the AWS k8s cluster deployment: 
 * a fresh EC2 Ubuntu instance on AWS
 * an IAM user/role with Route53, EC2, IAM and S3 full access and attached to the EC2 instance
 * a Route53 private hosted zone, example used is appstacleoulu.fi on eu-west-3 region
@@ -53,9 +53,9 @@ kops delete cluster dev.k8s.appstacleoulu.fi --yes
 ```
 ## Deploying Azure k8s cluster
 
-Prerequisites
-An Azure subscription.
-Azure CLI installed to setup the infrastructure.
+#### Prerequisites
+* an [Azure subscription](https://azure.microsoft.com/en-us/get-started/)
+* [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) installed to setup the infrastructure.
 
 ```
 chmod +x Azure_k8s.sh && \
