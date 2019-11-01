@@ -11,6 +11,7 @@ echo "####### Initialization #######"
 
 #
 
+SCRIPTPATH=$(dirname "$(readlink -f "$0")")
 
 echo ”####installing Helm####”
 curl -LO https://git.io/get_helm.sh
@@ -31,8 +32,7 @@ echo
 
 echo 
 echo “####Deploying Eclipse Hono 1.0.0####”
-./cd-backward
-cd eclipse-hono-1.0.0
+cd $SCRIPTPATH/eclipse-hono-1.0.0
 mkdir resources
 helm dep update eclipse-hono/
 helm template --name hono --namespace hono --output-dir resources eclipse-hono/
