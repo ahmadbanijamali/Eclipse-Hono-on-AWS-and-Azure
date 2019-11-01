@@ -75,7 +75,7 @@ kubectl cluster-info
 
 ## Deploying the Eclipse Hono on the AWS/Azure k8s clusters:
 ```
-chmod +x Hono_deployment.sh && \
+chmod +x Hono_deployment.sh
 ./Hono_deployment.sh
 ```
 
