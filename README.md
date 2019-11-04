@@ -90,7 +90,7 @@ To get Hono services, pods, and endpoints
 ```
 kubectl get pods,svc,ep -n hono
 ```
-To describe the pod and get logs. Replace "..." with your specific pod name.
+To describe the pod and get logs. (Note: Replace "..." with your specific pod name.)
 ```
 kubectl describe pod ... -n hono
 kubectl -n hono logs ...
