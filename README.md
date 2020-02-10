@@ -29,7 +29,7 @@ kops update cluster dev.k8s.appstacleoulu.fi --yes
 It takes 5-10 min to create the AWS k8s cluster.
 
 
-To validating your cluster:
+To validate your cluster:
 ```
 kops validate cluster
 ```
