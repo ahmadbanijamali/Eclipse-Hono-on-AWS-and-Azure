@@ -20,7 +20,7 @@ chmod +x AWS_k8s.sh
 ./AWS_k8s.sh
 ```
 
-Enter your EC2 instance zone when it required.
+Enter your EC2 instance zone when it is required.
 
 Finally, create kubernetes cluser:
 ```
