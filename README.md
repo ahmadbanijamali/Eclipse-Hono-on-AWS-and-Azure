@@ -1,5 +1,5 @@
 
-## Deploying AWS k8s cluster
+## Deploy AWS k8s cluster
 
 #### Prerequisities before running the AWS k8s cluster deployment: 
 * a fresh [EC2 Ubuntu instance on AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
@@ -50,7 +50,7 @@ To delete the k8s cluster:
 export KOPS_STATE_STORE=s3://dev.k8s.appstacleoulu.fi
 kops delete cluster dev.k8s.appstacleoulu.fi --yes
 ```
-## Deploying Azure k8s cluster
+## Deploy Azure k8s cluster
 
 #### Prerequisites
 * an [Azure subscription](https://azure.microsoft.com/en-us/get-started/)
